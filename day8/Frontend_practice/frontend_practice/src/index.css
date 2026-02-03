@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,#root {
+    width: 100%;
+    height: 100%;
+    font-family: apple;
+}
+
+html{
+  background:#3d3d3d;
+  color: aliceblue;
+}
+
+
+.notes{
+  display: flex;
+  height: 100vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+.note{
+  width: 200px;
+  height: 100px;
+  background: rgb(231, 231, 227);
+  border-radius: 10px;
+}
+
+h1{
+  font-size: 20px;
+  margin: 10px;
+  color: black;
+}
+
+p{
+  font-size: 14px;
+  margin: 10px;
+  color: black;
+}

@@ -1,0 +1,12 @@
+
+const mongoose=require("mongoose")
+
+function connectdata(){
+   mongoose.connect(process.env.MONGO_URI)
+   .then(()=>{
+    console.log("database is connected");
+    
+   })
+}
+
+module.exports=connectdata
