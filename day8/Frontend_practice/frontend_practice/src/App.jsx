@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 function App() {
   const [Notes, setNotes] = useState([])
 
-  console.log("hellowww");
+
 
 
   function fetchNotes() {
