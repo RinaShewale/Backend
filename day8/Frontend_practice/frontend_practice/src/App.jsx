@@ -51,7 +51,7 @@ function App() {
   function handleUpdate(note) {
     const newtitle = prompt("enter new title", note.title);
     const newdescription = prompt("enter new description", note.description);
-    axios.patch(`https://backend-1-lern.onrender.com/api/notes${note._id}`, {
+    axios.patch(`https://backend-1-lern.onrender.com/api/notes/${note._id}`, {
       title: newtitle,
       description: newdescription
     })
