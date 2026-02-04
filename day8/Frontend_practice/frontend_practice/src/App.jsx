@@ -11,7 +11,7 @@ function App() {
 
 
   function fetchNotes() {
-    axios.get("https://backend-1-lern.onrender.com")
+    axios.get("https://backend-1-lern.onrender.com/api/notes")
       .then((res) => {
         console.log("res.data", res.data);
         setNotes(res.data.notes);
@@ -31,7 +31,7 @@ function App() {
     console.log("title", title.value);
     console.log("description", description.value);
 
-    axios.post("https://backend-1-lern.onrender.com", {
+    axios.post("https://backend-1-lern.onrender.com/api/notes", {
       title: title.value,
       description: description.value
     })
@@ -41,7 +41,7 @@ function App() {
   }
 
   function handledelete(note_id) {
-    axios.delete(`https://backend-1-lern.onrender.com/${note_id}`)
+    axios.delete(`https://backend-1-lern.onrender.com/api/notes/${note_id}`)
       .then(res => {
         fetchNotes();
       })
@@ -51,7 +51,7 @@ function App() {
   function handleUpdate(note) {
     const newtitle = prompt("enter new title", note.title);
     const newdescription = prompt("enter new description", note.description);
-    axios.patch(`https://backend-1-lern.onrender.com/${note._id}`, {
+    axios.patch(`https://backend-1-lern.onrender.com/api/notes${note._id}`, {
       title: newtitle,
       description: newdescription
     })
